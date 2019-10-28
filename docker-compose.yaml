@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    volumes:
+     - /media/data/pxe-esxi/html:/var/www/html/
+     - /media/data/pxe-esxi/html:/usr/share/nginx/html
+    ports:
+     - "80:80"
+
+  tftp-hpa:
+    image: taskinen/tftp
+    container_name: tftp
+    volumes:
+    - /media/data/pxe-esxi/tftpboot:/var/tftpboot:ro
+    ports:
+     - "69:69/udp"
