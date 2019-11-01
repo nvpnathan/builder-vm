@@ -52,7 +52,7 @@ resource "vsphere_virtual_disk" "data_volume" {
   datastore  = var.data_datastore
   type       = "thin"
   lifecycle {
-    prevent_destroy = false
+    prevent_destroy = true
   }
 }
 
@@ -63,7 +63,7 @@ resource "vsphere_virtual_disk" "backup_volume" {
   datastore  = var.data_datastore
   type       = "thin"
   lifecycle {
-    prevent_destroy = false
+    prevent_destroy = true
   }
 }
 
