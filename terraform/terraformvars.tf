@@ -39,7 +39,7 @@ variable "data_datastore" {
 }
 
 variable "vmrp" {
-  description = "resource pool you want to provision to"
+  description = "vsphere resource pool you want to provision to"
 }
 
 variable "vm_name" {

@@ -3,10 +3,10 @@ vsphere_user = "administrator@vsphere.local"
 vsphere_password = "VMware1!"
 vsphere_server = "vlab-vcsa.vballin.com"
 datacenter = "vlab-dc"
-portgroup = "vlab-dmz"
+portgroup = "tf-vlab-dmz"
 data_datastore = "vlab-nfs-ds-01"
-vmrp = "terraform-vms"
-vm_template = "packer-templates/packer-ubuntu-1804-2019-10-28T1572277205"
+vmrp        = "tf-terraform-vms"
+vm_template = "packer-templates/packer-ubuntu-1804-2020-04-13T1586805398"
 
 ## VM Information
 vm_name = "vlab-builder-01"
